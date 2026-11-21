@@ -1,0 +1,100 @@
+// All site content. Edit here; the page rebuilds itself from these lists.
+
+export const SCAMS = [
+  { n: 1, name: "The UPI collect", channel: "UPI app",
+    line: "₹5,000 sent. Enter PIN to accept.",
+    how: "A collect request dressed up as incoming money. The moment you enter your PIN, the money leaves your account.",
+    rule: "Receiving money never needs your PIN. Ever." },
+  { n: 2, name: "The sticker QR", channel: "Parking · shops",
+    line: "Scan here to pay.",
+    how: "Scammers paste their own QR code over the real one at parking lots, shops and ticket counters.",
+    rule: "Check the name on the payment screen. Wrong name, don't pay." },
+  { n: 3, name: "The AI voice call", channel: "Phone call",
+    line: "Mom, I'm in trouble. Send money.",
+    how: "Thirty seconds of your reels is enough to clone your voice with AI. The caller sounds exactly like family.",
+    rule: "Set a family safe word. No word? Hang up and call back on the saved number." },
+  { n: 4, name: "The task job", channel: "Telegram",
+    line: "Earn ₹5,000 a day liking videos.",
+    how: "The first tasks pay real money to build trust. Then you must \"deposit\" to unlock bigger ones.",
+    rule: "A real job never asks for your money first." },
+  { n: 5, name: "The digital arrest", channel: "Video call",
+    line: "CBI here. Your Aadhaar is flagged.",
+    how: "A fake officer on a video call, uniform and all, keeps you on the line for hours until you transfer \"bail\".",
+    rule: "Digital arrest does not exist. Police never arrest on a video call. Hang up." },
+  { n: 6, name: "The parcel fee", channel: "SMS",
+    line: "Your parcel is held. Pay ₹49.",
+    how: "The link opens a fake courier page built to take your card details. The ₹49 was never the point.",
+    rule: "Track parcels in the courier's own app, never a link from SMS or WhatsApp." },
+  { n: 7, name: "The SIM swap", channel: "Your carrier",
+    line: "No signal.",
+    how: "With a duplicate SIM, every OTP goes to them. All you see is \"No signal\" on your phone.",
+    rule: "No network for hours? Call your carrier from another phone, now." },
+];
+
+export const RESOURCES = [
+  { id: "check", label: "Check yourself", blurb: "Ten free sites to find out what's already exposed. Five are run by the Government of India.",
+    items: [
+      { name: "Have I Been Pwned", url: "https://haveibeenpwned.com", tag: "Email leaks", note: "Type your email. It lists every known data breach it showed up in." },
+      { name: "Google Password Checkup", url: "https://passwords.google.com", tag: "Passwords", note: "Flags saved passwords that are leaked, reused or weak. Fix the compromised ones first." },
+      { name: "Sanchar Saathi", url: "https://sancharsaathi.gov.in", tag: "Govt of India", note: "Lists every mobile number registered on your ID. Unknown one? Mark it \"Not my number\"." },
+      { name: "CEIR", url: "https://ceir.gov.in", tag: "Govt of India", note: "Block a lost or stolen phone by its IMEI so it can't be used on any network." },
+      { name: "myAadhaar", url: "https://myaadhaar.uidai.gov.in", tag: "Govt of India", note: "Lock your biometrics and check where your Aadhaar was used." },
+      { name: "CIBIL", url: "https://www.cibil.com", tag: "Loans", note: "Your credit report shows every loan and card on your PAN. Checking your own score won't lower it." },
+      { name: "VirusTotal", url: "https://www.virustotal.com", tag: "Links · files", note: "Paste a link or upload a file. Dozens of antivirus engines check it at once." },
+      { name: "Google Safe Browsing", url: "https://transparencyreport.google.com/safe-browsing/search", tag: "Websites", note: "Paste any web address to see if it's flagged. \"Not flagged\" isn't a guarantee." },
+      { name: "SEBI", url: "https://www.sebi.gov.in", tag: "Govt of India", note: "Check that an \"adviser\" is really SEBI-registered before you pay them a rupee." },
+      { name: "Cyber Crime Portal", url: "https://cybercrime.gov.in", tag: "Govt of India", note: "Already lost money? Call 1930 first, then file the complaint here." },
+    ] },
+  { id: "hack", label: "Learn hacking, legally", blurb: "Five free places to learn ethical hacking. Pick one and finish it.",
+    items: [
+      { name: "PortSwigger Web Security Academy", url: "https://portswigger.net/web-security", tag: "Web", note: "Free labs where you break deliberately vulnerable practice sites." },
+      { name: "TryHackMe", url: "https://tryhackme.com", tag: "Beginner", note: "Free beginner rooms that run right in your browser." },
+      { name: "picoCTF", url: "https://picoctf.org", tag: "Students", note: "Free hacking challenges made for students." },
+      { name: "OverTheWire: Bandit", url: "https://overthewire.org/wargames/bandit/", tag: "Linux", note: "Learn Linux by hacking your way up, one level at a time." },
+      { name: "Hack The Box Academy", url: "https://academy.hackthebox.com", tag: "Modules", note: "Free starter modules to build the fundamentals." },
+    ] },
+  { id: "ai", label: "Hack AI, legally", blurb: "AI security is the newest corner of cybersecurity, and the hands-on training costs ₹0.",
+    items: [
+      { name: "Lakera Agent Breaker", url: "https://play.lakera.ai", tag: "Hands-on", note: "Hack real AI apps with prompt attacks, level by level." },
+      { name: "PortSwigger: Web LLM attacks", url: "https://portswigger.net/web-security/llm-attacks", tag: "Labs", note: "Free labs where you attack AI chatbots on purpose." },
+      { name: "OWASP Top 10 for LLMs", url: "https://genai.owasp.org/llm-top-10/", tag: "Theory", note: "How AI apps really get hacked, ranked." },
+      { name: "MITRE ATLAS", url: "https://atlas.mitre.org", tag: "Theory", note: "A map of real attacks on AI systems." },
+      { name: "Learn Prompting", url: "https://learnprompting.org", tag: "Guide", note: "Prompt hacking, taught from zero." },
+    ] },
+  { id: "learn", label: "Learn AI free", blurb: "Don't buy an AI course. Watch these seven first, in this order.",
+    items: [
+      { name: "3Blue1Brown: Neural networks", url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi", tag: "Start here", note: "Animations that make neural networks finally click. No heavy maths needed." },
+      { name: "StatQuest: Machine Learning", url: "https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF", tag: "Concepts", note: "Josh Starmer explains each machine learning idea simply and slowly." },
+      { name: "CampusX: 100 Days of ML", url: "https://www.youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH", tag: "Hindi", note: "From data cleaning to models, all in Hindi." },
+      { name: "freeCodeCamp: ML for Everybody", url: "https://www.youtube.com/watch?v=i_LwzRVP7bg", tag: "Full course", note: "One free video, start to finish. Pause, code along, finish it." },
+      { name: "Stanford CS229 with Andrew Ng", url: "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU", tag: "University", note: "The actual Stanford lectures, recorded in class." },
+      { name: "Andrej Karpathy: Zero to Hero", url: "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ", tag: "Deep end", note: "Builds neural networks, and a small GPT, from scratch in code." },
+      { name: "Krish Naik Hindi: GenAI + Agents", url: "https://www.youtube.com/playlist?list=PLTDARY42LDV567lWN_5BtoVGjMFKbthGu", tag: "Hindi", note: "LangChain, LangGraph and AI agents, explained in Hindi." },
+    ] },
+  { id: "certs", label: "Free certificates", blurb: "Three free cybersecurity certificates worth doing, in this order. A badge alone won't get you hired. Badges plus labs might.",
+    items: [
+      { name: "Cisco: Introduction to Cybersecurity", url: "https://www.netacad.com/courses/introduction-to-cybersecurity", tag: "~6 hours", note: "Start here. No experience needed, and you earn a Cisco badge." },
+      { name: "IBM SkillsBuild: Cybersecurity Fundamentals", url: "https://www.credly.com/org/ibm-skillsbuild/badge/cybersecurity-fundamentals", tag: "~7.5 hours", note: "Score 80% or more on the final assessment to earn the IBM badge." },
+      { name: "Fortinet Certified Fundamentals", url: "https://www.credly.com/org/fortinet/badge/fortinet-certified-fundamentals-cybersecurity", tag: "Industry cert", note: "Finish one core and one elective course, then pass the FCF exam." },
+    ] },
+];
+
+// The five-minute checkup. Progress is kept in this browser only.
+export const CHECKUP = [
+  { id: "hibp", text: "Check your email for leaks", link: "https://haveibeenpwned.com", linkText: "haveibeenpwned.com" },
+  { id: "pass", text: "Fix leaked or reused passwords", link: "https://passwords.google.com", linkText: "Password Checkup" },
+  { id: "sim", text: "See every SIM registered in your name", link: "https://sancharsaathi.gov.in", linkText: "Sanchar Saathi" },
+  { id: "simpin", text: "Set a SIM PIN (get your carrier's default PIN first)" },
+  { id: "theft", text: "Turn on Theft Protection (Android) or Stolen Device Protection (iPhone)" },
+  { id: "word", text: "Agree on a family safe word for emergency calls" },
+  { id: "1930", text: "Save 1930 in your parents' phones as \"Cyber Fraud Helpline\"" },
+];
+
+export const SITE = {
+  handle: "geeksecurity_",
+  instagram: "https://www.instagram.com/geeksecurity_/",
+  dm: "https://ig.me/m/geeksecurity_",
+  email: "geekscrty@gmail.com",
+  followers: "22.9K",
+  url: "https://geeksecurity.in/",
+};
