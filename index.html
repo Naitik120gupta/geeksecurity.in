@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GeekSecurity — You're not as secure as you think</title>
-<meta name="description" content="Naitik Gupta breaks down the scams, hacks and AI attacks hitting Indians right now, with free tools to check yourself and what to do in the first hour after a cyber fraud.">
-<meta name="theme-color" content="#120e0d">
+<title>GeekSecurity: the seven scams reaching Indian phones right now</title>
+<meta name="description" content="Naitik Gupta shows the exact message each scam starts with, the one rule that beats it, free tools to check yourself and what to do in the first hour after a cyber fraud.">
+<meta name="theme-color" content="#161513">
 <link rel="canonical" href="https://geeksecurity.in/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GeekSecurity">
 <meta property="og:url" content="https://geeksecurity.in/">
-<meta property="og:title" content="GeekSecurity — You're not as secure as you think">
-<meta property="og:description" content="The scams hitting Indians right now, the one rule that beats each, and free tools to check yourself.">
+<meta property="og:title" content="The seven scams reaching Indian phones right now">
+<meta property="og:description" content="The message each scam starts with, the one rule that beats it, and free tools to check yourself.">
 <meta property="og:image" content="https://geeksecurity.in/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -30,138 +30,126 @@
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+</svg>
 <a class="skip" href="#main">Skip to content</a>
-<canvas id="scene" aria-hidden="true"></canvas>
-<div class="veil" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="GeekSecurity home">
-    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path d="M16 2.5 27 6.6v8.2c0 6.6-4.4 12-11 14.7C9.4 26.8 5 21.4 5 14.8V6.6z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m11 16 3.6 3.6L21.5 12" fill="none" stroke="#eb4425" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <span>GEEK<b>SECURITY</b></span>
-  </a>
-  <nav class="links" aria-label="Sections">
-    <a href="#radar">Scam radar</a>
-    <a href="#resources">Free resources</a>
-    <a href="#checkup">Checkup</a>
-    <a href="#about">About</a>
-  </nav>
-  <a class="btn btn-sm btn-primary" href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">Follow</a>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="GeekSecurity home">
+      <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true"><path d="M16 3 26.500 7v8c0 6.300-4.200 11.400-10.500 14C9.700 26.400 5.500 21.300 5.500 15V7z"/><path d="m11.500 16 3.300 3.300 6-6.300"/></svg>
+      <span>GeekSecurity</span>
+    </a>
+    <nav class="links" id="links" aria-label="Sections">
+      <a href="#radar">Scam radar</a>
+      <a href="#resources">Free resources</a>
+      <a href="#checkup">Checkup</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn-sm" href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">Follow</a>
+    <button class="menu" id="menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="links"><svg class="i"><use href="#i-menu"/></svg></button>
+  </div>
 </header>
 
 <main id="main">
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>Cybersecurity · AI · Scam alerts for India</p>
-      <h1>You're not as <span class="hl">secure</span> as you think.</h1>
-      <p class="lede">I'm Naitik. I break down the scams, hacks and AI attacks hitting Indians right now, and the one move that stops each of them.</p>
+      <h1>The seven scams reaching Indian phones right now</h1>
+      <p class="lede">₹54 crore is lost to cyber fraud in India every day.<sup><a href="#src">1</a></sup> I'm Naitik. I show the exact message each scam starts with, and the one rule that beats it.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>
-          Follow @geeksecurity_</a>
-        <a class="btn btn-ghost" href="#resources">Free resources <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-lg btn-primary" href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">Follow @geeksecurity_</a>
+        <a class="btn btn-lg" href="#resources">Free resources</a>
       </div>
-      <dl class="stats">
-        <div><dt>22.9K</dt><dd>people follow on Instagram</dd></div>
-        <div><dt>₹54 crore</dt><dd>lost to cyber fraud in India every day<sup><a href="#src">1</a></sup></dd></div>
-        <div><dt>₹0</dt><dd>cost of every resource on this site</dd></div>
-      </dl>
     </div>
-    <div class="hero-space" aria-hidden="true">
-      <div class="float f1"><small>SMS · now</small>₹5,000 sent. Enter <b>PIN</b> to accept.</div>
-      <div class="float f2"><small>Video call · now</small>CBI here. Your <b>Aadhaar</b> is flagged.</div>
-      <div class="float f3"><small>Telegram · now</small>Earn ₹5,000/day liking videos</div>
+    <div class="hero-visual" id="phone">
+      <canvas id="scene" role="img" aria-label="A phone lock screen receiving scam messages, one after another: ₹5,000 sent, enter PIN to accept. CBI here, your Aadhaar is flagged. Your parcel is held, pay ₹49."></canvas>
     </div>
   </div>
-  <a class="scroll-cue" href="#sos" aria-label="Scroll down"><span></span></a>
 </section>
 
-<section class="sos" id="sos" aria-labelledby="sos-h">
-  <div class="wrap sos-card reveal">
-    <div>
-      <p class="tag tag-live"><span class="dot"></span>If it just happened</p>
-      <h2 id="sos-h">Lost money to a fraud? The first hour decides.</h2>
-      <p>Banks can freeze the money only while it is still sitting in an account. Every hour you wait, it can move again.</p>
-    </div>
-    <ol class="sos-steps">
-      <li><b>Call 1930.</b> The national cyber fraud helpline alerts the banks your money moved through.</li>
-      <li><b>Call your bank.</b> Block the card and UPI.</li>
-      <li><b>File at cybercrime.gov.in</b> with screenshots, the UTR number and the scammer's UPI ID.</li>
-    </ol>
-    <div class="sos-actions">
-      <a class="btn btn-primary btn-lg" href="tel:1930">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6.6 3h3l1.5 4.5-2 1.6a12 12 0 0 0 5.8 5.8l1.6-2 4.5 1.5v3a2.6 2.6 0 0 1-2.7 2.6A15.3 15.3 0 0 1 4 5.700 2.600 2.600 0 0 1 6.600 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-        Call 1930</a>
-      <a class="btn btn-ghost" href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in ↗</a>
+<section class="block" id="sos" aria-labelledby="sos-h">
+  <div class="wrap">
+    <div class="sos">
+      <div class="sos-main">
+        <h2 id="sos-h">Lost money to a fraud? The first hour decides</h2>
+        <p>Banks can freeze the money only while it is still sitting in an account. Every hour you wait, it can move again.</p>
+        <p class="helpline"><span class="helpline-label">National cyber fraud helpline</span><a class="helpline-num" href="tel:1930">1930</a></p>
+        <div class="cta-row">
+          <a class="btn btn-lg btn-primary" href="tel:1930"><svg class="i"><use href="#i-phone"/></svg>Call 1930</a>
+          <a class="btn btn-lg" href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in<svg class="i"><use href="#i-ext"/></svg></a>
+        </div>
+      </div>
+      <ol class="sos-steps">
+        <li><span class="step-n">1</span><div><h3>Call 1930</h3><p>The national cyber fraud helpline alerts the banks your money moved through.</p></div></li>
+        <li><span class="step-n">2</span><div><h3>Call your bank</h3><p>Block the card and UPI.</p></div></li>
+        <li><span class="step-n">3</span><div><h3>File at cybercrime.gov.in</h3><p>Attach screenshots, the UTR number and the scammer's UPI ID.</p></div></li>
+      </ol>
     </div>
   </div>
 </section>
 
 <section class="block" id="radar" aria-labelledby="radar-h">
   <div class="wrap">
-    <header class="head reveal">
-      <p class="tag">Scam radar</p>
-      <h2 id="radar-h">Seven scams. <span class="hl">One rule each.</span></h2>
-      <p>Each one starts with a normal-looking message. Tap a card to see how it works and the rule that beats it.</p>
+    <header class="head">
+      <h2 id="radar-h">Seven scams, one rule each</h2>
+      <p>Each one starts with a normal-looking message. Here is the message, how it works and the rule that beats it.</p>
     </header>
-    <div class="radar" id="radar-grid"></div>
-    <div class="share-row reveal">
+    <ol class="radar" id="radar-grid"></ol>
+    <div class="share-row">
       <p>The people who fall for these are the ones who never see pages like this.</p>
-      <button class="btn btn-ghost" data-share="Seven scams hitting Indians right now, and the one rule that beats each.">Send this to your family group</button>
+      <button class="btn" type="button" data-share="Seven scams hitting Indians right now, and the one rule that beats each.">Send this to your family group</button>
     </div>
   </div>
 </section>
 
 <section class="block" id="resources" aria-labelledby="res-h">
   <div class="wrap">
-    <header class="head reveal">
-      <p class="tag">Free resources</p>
-      <h2 id="res-h">Everything here costs <span class="hl">₹0.</span></h2>
+    <header class="head">
+      <h2 id="res-h">Everything here costs ₹0</h2>
       <p>The links from my posts, in one place. Official sites only, no sign-up through me, no affiliate links.</p>
     </header>
-    <div class="tabs reveal" role="tablist" aria-label="Resource categories" id="res-tabs"></div>
+    <div class="tabs" role="tablist" aria-label="Resource categories" id="res-tabs"></div>
     <p class="res-blurb" id="res-blurb"></p>
-    <div class="res-grid" id="res-grid" role="tabpanel"></div>
+    <div class="res-list" id="res-grid" role="tabpanel"></div>
   </div>
 </section>
 
 <section class="block" id="checkup" aria-labelledby="chk-h">
   <div class="wrap checkup">
-    <header class="head reveal">
-      <p class="tag">Five-minute checkup</p>
-      <h2 id="chk-h">Seven things to do <span class="hl">tonight.</span></h2>
+    <header class="head">
+      <h2 id="chk-h">Seven things to do tonight</h2>
       <p>Tick them off as you go. Your progress stays on this device only.</p>
-      <div class="ring-box">
-        <svg class="ring" viewBox="0 0 120 120" width="132" height="132" role="img" aria-labelledby="ring-label">
-          <circle cx="60" cy="60" r="52" class="ring-bg"/>
-          <circle cx="60" cy="60" r="52" class="ring-fg" id="ring-fg"/>
-        </svg>
-        <div class="ring-text"><strong id="ring-num">0/7</strong><span id="ring-label">done</span></div>
+      <div class="progress" role="img" aria-labelledby="chk-count">
+        <div class="progress-bar"><span id="chk-fill"></span></div>
+        <p class="progress-text" id="chk-count">0 of 7 done</p>
       </div>
-      <button class="btn btn-ghost" data-share="A five-minute security checkup. Seven things to do tonight." id="chk-share">Share the checklist</button>
+      <button class="btn" type="button" data-share="A five-minute security checkup. Seven things to do tonight." id="chk-share">Share the checklist</button>
     </header>
-    <ul class="chk-list reveal" id="chk-list"></ul>
+    <ul class="chk-list" id="chk-list"></ul>
   </div>
 </section>
 
 <section class="block" id="about" aria-labelledby="about-h">
-  <div class="wrap about reveal">
-    <img src="assets/avatar.jpg" width="160" height="160" alt="Naitik Gupta" loading="lazy">
+  <div class="wrap about">
+    <img src="assets/avatar.jpg" width="96" height="96" alt="Naitik Gupta" loading="lazy">
     <div>
-      <p class="tag">About</p>
       <h2 id="about-h">Naitik Gupta</h2>
-      <p class="role">AI Security Engineer &amp; Educator</p>
+      <p class="role">AI Security Engineer &amp; Educator · 22.9K follow on Instagram</p>
       <p>GeekSecurity is where I show how AI and everyday tech get attacked, and how not to be the one who gets hacked. Short posts, real screens, no jargon.</p>
       <ul class="beliefs">
-        <li>2FA, a VPN or "privacy mode" won't save you by themselves.</li>
-        <li>Learn how AI systems actually work instead of chasing every new tool.</li>
-        <li>A portfolio beats certificates.</li>
+        <li>2FA, a VPN or "privacy mode" won't save you by themselves</li>
+        <li>Learn how AI systems actually work instead of chasing every new tool</li>
+        <li>A portfolio beats certificates</li>
       </ul>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">Follow on Instagram</a>
-        <a class="btn btn-ghost" href="https://ig.me/m/geeksecurity_" target="_blank" rel="noopener">Send a DM</a>
-        <a class="btn btn-ghost" href="mailto:geekscrty@gmail.com">Collabs: geekscrty@gmail.com</a>
+        <a class="btn" href="https://ig.me/m/geeksecurity_" target="_blank" rel="noopener">Send a DM</a>
       </div>
+      <p class="contact">Collabs: <a href="mailto:geekscrty@gmail.com">geekscrty@gmail.com</a></p>
     </div>
   </div>
 </section>
@@ -169,10 +157,11 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p class="foot-brand">GEEK<b>SECURITY</b></p>
+    <p class="foot-brand">GeekSecurity</p>
+    <p>You're not as secure as you think.</p>
     <p id="src"><sup>1</sup> ₹19,813 crore reported lost to cyber fraud in 2025, National Cyber Crime Reporting Portal (I4C) data, about ₹54 crore a day.</p>
     <p>For education only. GeekSecurity is independent and not affiliated with any government body, bank or company named here. In an emergency call 1930.</p>
-    <p class="foot-row"><span>© <span id="year">2026</span> Naitik Gupta</span><a href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">Instagram</a><a href="mailto:geekscrty@gmail.com">Email</a><a href="#top">Back to top ↑</a></p>
+    <p class="foot-row"><span>© <span id="year">2026</span> Naitik Gupta</span><a href="https://www.instagram.com/geeksecurity_/" target="_blank" rel="noopener">Instagram</a><a href="mailto:geekscrty@gmail.com">Email</a><a href="#top">Back to top</a></p>
   </div>
 </footer>
 
