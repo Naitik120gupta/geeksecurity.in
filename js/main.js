@@ -1,16 +1,23 @@
-import { SCAMS, RESOURCES, CHECKUP, SITE } from './data.js';
+import { SCAMS, RESOURCES, CHECKUP, POSTS, SITE } from './data.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (tag, attrs = {}, html = '') => { const n = document.createElement(tag); for (const k in attrs) n.setAttribute(k, attrs[k]); n.innerHTML = html; return n; };
 const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+/* ---------- profile numbers, community links, feed ---------- */
+document.querySelectorAll('[data-site]').forEach(n => { n.textContent = SITE[n.dataset.site]; });
+document.querySelectorAll('[data-link]').forEach(n => { n.href = SITE[n.dataset.link]; });
+$('#feed').append(...POSTS.filter(p => !p.phoneOnly).map(p => el('a', { class: 'post', href: p.url, target: '_blank', rel: 'noopener', 'aria-label': `${p.kind}: ${p.title}` },
+  `<img src="assets/posts/${p.img}.jpg" width="540" height="675" alt="" loading="lazy"><span>${p.kind}</span>`)));
+
 /* ---------- scam radar ---------- */
 const ext = '<svg class="i" aria-hidden="true"><use href="#i-ext"/></svg>';
-const radar = $('#radar-grid');
-SCAMS.forEach(s => radar.append(el('li', { class: 'scam' }, `
-  <span class="scam-n" aria-hidden="true">${s.n}</span>
+const share = $('#radar-share');
+SCAMS.forEach(s => share.before(el('article', { class: 'scam' }, `
+  <p class="scam-n">Scam ${s.n} of ${SCAMS.length}</p>
   <div class="note"><p class="note-meta"><span>${esc(s.channel)}</span><span>now</span></p><p class="note-line">${esc(s.line)}</p></div>
-  <div class="scam-body"><h3>${esc(s.name)}</h3><p>${esc(s.how)}</p><p class="rule"><span>Rule</span>${esc(s.rule)}</p></div>`)));
+  <h3>${esc(s.name)}</h3><p class="how">${esc(s.how)}</p>
+  <p class="rule"><span>The rule</span>${esc(s.rule)}</p>`)));
 
 /* ---------- resources ---------- */
 const tabs = $('#res-tabs'), grid = $('#res-grid'), blurb = $('#res-blurb');
@@ -87,7 +94,7 @@ const menu = $('#menu');
 menu.addEventListener('click', () => menu.setAttribute('aria-expanded', String(nav.classList.toggle('open'))));
 $('#links').addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); });
 
-const secs = ['radar', 'resources', 'checkup', 'about'].map(id => $('#' + id));
+const secs = ['community', 'feed-sec', 'radar', 'resources', 'about'].map(id => $('#' + id));
 const spy = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) document.querySelectorAll('.links a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-45% 0px -50% 0px' });
 secs.forEach(s => spy.observe(s));
 
@@ -98,22 +105,16 @@ const stage = $('#phone'), canvas = $('#scene');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 (async () => {
   const { createScreen } = await import('./screen.js');
-  const screen = await createScreen(SCAMS.filter(s => s.n !== 2)); // the QR sticker is not a message
+  const screen = await createScreen(SITE, POSTS);
   try {
     const { startPhone } = await import('./scene.js');
     startPhone(canvas, screen, { reduce });
   } catch {
-    // no WebGL: show the same lock screen flat
+    // no WebGL: show the same screen flat
     screen.canvas.className = 'phone-flat';
     screen.canvas.setAttribute('role', 'img');
     screen.canvas.setAttribute('aria-label', canvas.getAttribute('aria-label'));
     canvas.replaceWith(screen.canvas);
-    const loop = t => { screen.tick(t); requestAnimationFrame(loop); };
-    requestAnimationFrame(loop);
   }
   stage.classList.add('ready');
-  if (reduce) return;
-  let seen = true;
-  new IntersectionObserver(([e]) => { seen = e.isIntersecting; }).observe(stage);
-  setInterval(() => { if (seen && !document.hidden) screen.push(); }, 3600);
 })().catch(() => { stage.style.display = 'none'; });

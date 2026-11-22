@@ -90,11 +90,31 @@ export const CHECKUP = [
   { id: "1930", text: "Save 1930 in your parents' phones as \"Cyber Fraud Helpline\"" },
 ];
 
+// Posts shown in "Fresh from the feed" and on the hero phone. Thumbnails live in assets/posts/ (540x675).
+// Newest first. Add a post: drop the cover in assets/posts/, add a line here with its Instagram link.
+const IG = "https://www.instagram.com/geeksecurity_";
+export const POSTS = [
+  { img: "sim", url: IG + "/reel/DgC1cyaOQyL/", kind: "Reel", title: "A SIM in your name?" },
+  { img: "1930", url: IG + "/reel/DgAPA-vTvvu/", kind: "Reel", title: "Got scammed? Call 1930" },
+  { img: "certs", url: IG + "/p/Df9p-xAgPlR/", kind: "Carousel", title: "3 free cybersecurity certificates" },
+  { img: "hackai", url: IG + "/reel/Df7EwzRg3qR/", kind: "Reel", title: "5 free sites to hack AI" },
+  { img: "hotel", url: IG + "/reel/Df2LEHAO8oD/", kind: "Reel", title: "That hotel page is a copy" },
+  { img: "theft", url: IG + "/p/Df1-JAoHefR/", kind: "Carousel", title: "Phone stolen? Your bank is next" },
+  { img: "challan", url: IG + "/reel/Dfzg10VOtuJ/", kind: "Reel", title: "That challan SMS is fake" },
+  { img: "leak", url: IG + "/reel/Dfwz9YXzOYw/", kind: "Reel", title: "Your password already leaked?" },
+  { img: "injection", url: IG + "/", kind: "Reel", title: "Your AI just obeyed a stranger", phoneOnly: true },
+];
+
+// Profile numbers as shown on Instagram. Update here when they change.
 export const SITE = {
   handle: "geeksecurity_",
-  instagram: "https://www.instagram.com/geeksecurity_/",
+  name: "Naitik Gupta | Geek | Cybersecurity",
+  bio: ["CyberSecurity | AI", "Spreading Cyber Awareness", "You're not as secure as you think"],
+  posts: "183", followers: "22.9K", following: "54",
+  instagram: IG + "/",
+  whatsapp: "https://chat.whatsapp.com/DaO5ZDdUS2FExU4uWKAhH0?s=cl&p=a&iam=2",
+  telegram: "https://t.me/geeksecurity",
   dm: "https://ig.me/m/geeksecurity_",
   email: "geekscrty@gmail.com",
-  followers: "22.9K",
   url: "https://geeksecurity.in/",
 };

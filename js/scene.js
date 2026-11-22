@@ -1,6 +1,6 @@
-// The hero phone: a real-looking handset in three.js whose screen is the live lock screen
-// from screen.js. Renders only when something changed (a message arriving, the pointer
-// tilting it), and stops while it is off screen.
+// The hero phone: a real-looking handset in three.js whose screen is the Instagram profile
+// drawn by screen.js. Renders only when something changed (the pointer tilting it, a resize),
+// and stops while it is off screen.
 import * as THREE from 'three';
 
 const roundedRect = (w, h, r) => {
@@ -120,7 +120,6 @@ export function startPhone(canvas, screen, { reduce = false } = {}) {
   const frameLoop = now => {
     raf = requestAnimationFrame(frameLoop);
     if (!visible || document.hidden) return;
-    if (screen.tick(now)) { tex.needsUpdate = true; need = true; }
     const dx = goal.x - phone.rotation.x, dy = goal.y - phone.rotation.y;
     if (Math.abs(dx) > 1e-4 || Math.abs(dy) > 1e-4) {
       phone.rotation.x += dx * 0.07; phone.rotation.y += dy * 0.07; need = true;
