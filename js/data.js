@@ -53,6 +53,16 @@ export const RESOURCES = [
       { name: "OverTheWire: Bandit", url: "https://overthewire.org/wargames/bandit/", tag: "Linux", note: "Learn Linux by hacking your way up, one level at a time." },
       { name: "Hack The Box Academy", url: "https://academy.hackthebox.com", tag: "Modules", note: "Free starter modules to build the fundamentals." },
     ] },
+  { id: "github", label: "GitHub repos", blurb: "Don't buy a hacking course. These 7 free GitHub repos have over 6 lakh stars between them. Use them in this order, and only practise on labs or systems you own.",
+    items: [
+      { name: "roadmap.sh: Cyber Security", url: "https://roadmap.sh/cyber-security", tag: "Start here", note: "What to learn next, in order. The project behind it is one of GitHub's most-starred repos." },
+      { name: "OWASP Juice Shop", url: "https://github.com/juice-shop/juice-shop", tag: "Practice", note: "A fake online shop built to be hacked. Run it on your laptop and find 100+ bugs, legally." },
+      { name: "HackTricks", url: "https://github.com/HackTricks-wiki/hacktricks", tag: "Handbook", note: "Stuck on a lab? Search the trick here. A whole book of techniques." },
+      { name: "PayloadsAllTheThings", url: "https://github.com/swisskyrepo/PayloadsAllTheThings", tag: "Attacks", note: "SQL injection, XSS, account takeover. Each attack, with examples to test." },
+      { name: "SecLists", url: "https://github.com/danielmiessler/SecLists", tag: "Wordlists", note: "Wordlists for passwords, usernames and hidden pages. Pentesters use it daily." },
+      { name: "OWASP Cheat Sheet Series", url: "https://cheatsheetseries.owasp.org", tag: "Defence", note: "The other half of hacking: how to build apps that don't break." },
+      { name: "NVIDIA garak", url: "https://github.com/NVIDIA/garak", tag: "AI security", note: "Scans AI chatbots for jailbreaks and prompt injection." },
+    ] },
   { id: "ai", label: "Hack AI, legally", blurb: "AI security is the newest corner of cybersecurity, and the hands-on training costs ₹0.",
     items: [
       { name: "Lakera Agent Breaker", url: "https://play.lakera.ai", tag: "Hands-on", note: "Hack real AI apps with prompt attacks, level by level." },
